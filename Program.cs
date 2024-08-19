@@ -6,11 +6,15 @@ using Microsoft.Identity.Web.UI;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Configuration
+    .SetBasePath(Directory.GetCurrentDirectory())
+    .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+    .AddJsonFile("appsettings.secrets.json", optional: true, reloadOnChange: true);
+
 // Add services to the container.
 //setting up authentication for the application using entra ID as the identity provider.
 builder.Services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
                 .AddMicrosoftIdentityWebApp(builder.Configuration.GetSection("AzureAd"));
-
 
 
 //here enabling authorization for the application's controllers. 

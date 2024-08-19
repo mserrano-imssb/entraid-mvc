@@ -6,7 +6,6 @@ using System.Security.Claims;
 
 namespace EntraID_MVC.Controllers
 {
-    [Authorize]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -16,6 +15,7 @@ namespace EntraID_MVC.Controllers
             _logger = logger;
         }
 
+        [Authorize]
         public IActionResult Index()
         {
             return View();
