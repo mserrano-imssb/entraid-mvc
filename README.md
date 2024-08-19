@@ -35,3 +35,8 @@ Esto es porque solo se puede copiar en clipboard una sola vez.
 Asegurarse de guardarlo en un lugar seguro!
 ![alt text](130460.png)
 
+
+
+# Recursos de apoyo
+
+https://blog.nashtechglobal.com/integrating-microsoft-entra-id-previously-azure-active-directory-with-net-core-application/
